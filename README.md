@@ -1,7 +1,7 @@
 # Retinal Vessel Segmentation with Pixel-wise Adaptive Filters (ISBI 2021)
 
 # Introduction
-![image](https://github.com/Limingxing00/Retinal-Vessel-Segmentation-ISBI2022/blob/main/figure/framework.pdf)  
+![image](https://github.com/Limingxing00/Retinal-Vessel-Segmentation-ISBI2022/blob/main/figure/framework.png)  
 
 This is the official code of **Retinal Vessel Segmentation with Pixel-wise Adaptive Filters and Consistency Training  (ISBI 2021)**. We evaluate our methods on three datasets, DRIVE, CHASE_DB1 and STARE.
 
