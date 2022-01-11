@@ -1,0 +1,34 @@
+DATASET: "STARE"
+
+TRAIN_DATA_PATH: "/gdata1/limx/mx/STARE/dataset/train_data"
+TRAIN_LABEL_PATH: "/gdata1/limx/mx/STARE/dataset/train_label"
+
+TEST_DATA_PATH: "/gdata1/limx/mx/STARE/dataset/test_data"
+TEST_PRED_PATH: "results/test/STARE/prediction"
+TEST_LABEL_PATH: "/gdata1/limx/mx/STARE/dataset/test_label"
+
+# view
+# VAL_PICTURE_PATH: "/gdata1/limx/mx/dataset/Drive19/visualization"
+# VIEW_VAL_PATH: "results/val_view"
+# VIEW_TRAIN_PATH: "results/train_view"
+
+MODEL_PATH: "results/test/STARE/model"
+LOG_PATH: "results/test/STARE/logging.txt"
+
+# train
+LEARNING_RATE: 0.005
+BATCH_SIZE: 4
+EPOCH: 6000
+CHECK_BATCH: 50
+multi_scale: [0.3]
+INPUT_CHANNEL: 3
+MAX_AFFINITY: 5
+RCE_WEIGHT: 0.5
+RCE_RATIO: 10
+
+# inference
+MODEL_NUMBER: epoch_3450_f1_0.8170
+# load breakpoint
+IS_BREAKPOINT: False
+BREAKPOINT: ""
+

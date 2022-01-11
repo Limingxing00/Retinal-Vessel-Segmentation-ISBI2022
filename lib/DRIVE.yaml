@@ -1,0 +1,35 @@
+DATASET: "DRIVE"
+
+TRAIN_DATA_PATH: "/gdata1/limx/mx/dataset/Drive19/training/training/images"
+TRAIN_LABEL_PATH: "/gdata1/limx/mx/dataset/Drive19/training/training/1st_manual"
+
+
+TEST_DATA_PATH: "/gdata1/limx/mx/dataset/Drive19/test/test/images"
+TEST_PRED_PATH: "results/test/DRIVE/prediction"
+TEST_LABEL_PATH: "/gdata1/limx/mx/dataset/Drive19/test/test/label/1st_manual"
+
+# view
+#VAL_PICTURE_PATH: "/gdata1/limx/mx/dataset/Drive19/visualization"
+#VIEW_VAL_PATH: "results/val_view"
+#VIEW_TRAIN_PATH: "results/train_view"
+
+MODEL_PATH: "results/test/DRIVE/model"
+LOG_PATH: "results/test/DRIVE/logging.txt"
+
+# train
+LEARNING_RATE: 0.005
+BATCH_SIZE: 5
+EPOCH: 6000
+CHECK_BATCH: 50
+multi_scale: [0.3]
+INPUT_CHANNEL: 3
+MAX_AFFINITY: 5
+RCE_WEIGHT: 1
+RCE_RATIO: 15
+
+# inference
+MODEL_NUMBER: "epoch_2750_f1_0.8261"
+# load breakpoint
+IS_BREAKPOINT: False
+BREAKPOINT: ""
+

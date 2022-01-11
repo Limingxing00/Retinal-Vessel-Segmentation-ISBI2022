@@ -1,0 +1,35 @@
+DATASET: "CHASE_DB1"
+
+TRAIN_DATA_PATH: "/gdata1/limx/mx/CHASE_DB1/dataset/train_data"
+TRAIN_LABEL_PATH: "/gdata1/limx/mx/CHASE_DB1/dataset/train_label"
+
+
+TEST_DATA_PATH: "/gdata1/limx/mx/CHASE_DB1/dataset/test_data"
+TEST_PRED_PATH: "results/test/CHASE_DB1/prediction"
+TEST_LABEL_PATH: "/gdata1/limx/mx/CHASE_DB1/dataset/test_label"
+
+# view
+# VAL_PICTURE_PATH: "/gdata1/limx/mx/dataset/Drive19/visualization"
+# VIEW_VAL_PATH: "results/val_view"
+# VIEW_TRAIN_PATH: "results/train_view"
+
+MODEL_PATH: "results/test/CHASE_DB1/model"
+LOG_PATH: "results/test/CHASE_DB1/logging.txt"
+
+# train
+LEARNING_RATE: 0.005
+BATCH_SIZE: 8
+EPOCH: 6000
+CHECK_BATCH: 50
+multi_scale: [0.3]
+INPUT_CHANNEL: 3
+MAX_AFFINITY: 5
+RCE_WEIGHT: 2
+RCE_RATIO: 10
+
+# inference
+MODEL_NUMBER: "epoch_4900_f1_0.8167"
+# load breakpoint
+IS_BREAKPOINT: False
+BREAKPOINT: ""
+
