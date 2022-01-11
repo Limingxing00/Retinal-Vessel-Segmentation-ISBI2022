@@ -73,7 +73,6 @@ Please select the best model in loggging.txt and modify the ```MODEL_NUMBER``` i
 cd rootdir
 python inference.py --lib/DRIVE.yaml 
 ```
-Note we prepare the pre-trained model for the DRIVE, CHASE_DB1 and STARE datasets in the ```/results/test```.
 
 
 ## Evaluation
