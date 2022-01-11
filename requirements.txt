@@ -1,0 +1,10 @@
+cython
+numpy
+cffi
+opencv-python
+scipy
+Pillow
+pyyaml==5.4.1
+scikit-learn==0.22
+tensorboardX
+matplotlib
