@@ -5,8 +5,8 @@
 
 This is the official code of **Retinal Vessel Segmentation with Pixel-wise Adaptive Filters and Consistency Training  (ISBI 2022)**. We evaluate our methods on three datasets, DRIVE, CHASE_DB1 and STARE.
 
-# Datesets
-You can download the three datasets from [Google drive](https://drive.google.com/file/d/1GvcnmCvsAip8I5354BiN99kUnNXEf2Fl/view?usp=sharing).  
+# Datesets and results
+You can download the three datasets and our results from [Google drive](https://drive.google.com/drive/folders/1OJBy8uNSg-agk6Rz_xV9fTZGb_KC0j_V?usp=sharing).  
 Of course, you can download the dataset from [DRIVE](http://www.isi.uu.nl/Research/Databases/DRIVE/), [CHASE_DB1](https://blogs.kingston.ac.uk/retinal/chasedb1/) and [STARE](http://cecas.clemson.edu/~ahoover/stare/) respectively.
 
 # Quick start
