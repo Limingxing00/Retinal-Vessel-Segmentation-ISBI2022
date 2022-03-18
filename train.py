@@ -31,10 +31,10 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-# if not os.path.isdir("./results/events"):
-    # os.mkdir("./results/events")
+if not os.path.isdir("./results/events"):
+    os.mkdir("./results/events")
 
-# writer = SummaryWriter("./results/events")
+writer = SummaryWriter("./results/events")
 global_score = 0.7
 
 
@@ -119,12 +119,12 @@ def cal_foreground_ratio(label):
         mol = label[n,...].sum()
         den = H*W
         ratio.append(mol/den)
-    ratio = np.array(ratio)
+    ratio = torch.tensor(ratio)
     # pdb.set_trace()
     assert ratio.max()<=1, "Please check label ratio!"
-    return np.array(ratio)
+    return ratio
     
-
+flag = 0
 def train(epoch):
     model.train()
     batch_id = 0
@@ -154,13 +154,14 @@ def train(epoch):
         optimizer.step()
 
         batch_id += 1
+        flag += cfg['BATCH_SIZE']
         if batch_id % 2 == 0:
             print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.4f}, dice {:.4f}, l1 {:.4f}'.format(
                 epoch, batch_id * len(data), cfg['BATCH_SIZE'] * len(train_dataset),
                        100. * batch_id / len(train_dataset), loss.item(), dice.item(), l1.item()))
-
-        # writer.add_scalar('train/dice', dice.item(), epoch * len(train_dataset) + batch_id * cfg['BATCH_SIZE'])
-        # writer.add_scalar('train/l1', l1.item(), epoch * len(train_dataset) + batch_id * cfg['BATCH_SIZE'])
+        
+        writer.add_scalar('train/dice', dice.item(), flag)
+        writer.add_scalar('train/l1', l1.item(), flag)
 
 
 def model_checkpoint(model, epoch, f1, acc, auc, specificity, precision, sensitivity, cfg):
@@ -269,7 +270,7 @@ if __name__ == "__main__":
             f1, acc, auc, specificity, precision, sensitivity = metrics(label_path=cfg['TEST_LABEL_PATH'],
                                                                         prediction_path=cfg['TEST_PRED_PATH'],
                                                                         cfg=cfg)
-            # writer.add_scalar('metric/f1', f1, i)
-            # writer.add_scalar('metric/auc', auc, i)
+            writer.add_scalar('metric/f1', f1, i)
+            writer.add_scalar('metric/auc', auc, i)
 
             model_checkpoint(model, i, f1, acc, auc, specificity, precision, sensitivity, cfg)
