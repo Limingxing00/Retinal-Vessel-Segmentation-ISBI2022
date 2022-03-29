@@ -45,7 +45,7 @@ multi_scale: [0.3]
 INPUT_CHANNEL: 3
 MAX_AFFINITY: 5
 RCE_WEIGHT: 1
-RCE_RATIO: 10
+RCE_RATIO: 0.1
 
 # inference
 MODEL_NUMBER: "epoch_2750_f1_0.8261"
