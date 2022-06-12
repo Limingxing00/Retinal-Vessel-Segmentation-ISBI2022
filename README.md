@@ -81,3 +81,16 @@ To evalutate the results offline bewteen `cfg['TEST_PRED_PATH']` and `cfg['TEST_
 cd rootdir
 python eval.py --lib/DRIVE.yaml 
 ```
+
+# Citation
+If you find this work or code is helpful in your research, please cite:
+```
+@inproceedings{li2022retinal,
+  title={Retinal Vessel Segmentation with Pixel-Wise Adaptive Filters},
+  author={Li, Mingxing and Zhou, Shenglong and Chen, Chang and Zhang, Yueyi and Liu, Dong and Xiong, Zhiwei},
+  booktitle={2022 IEEE 19th International Symposium on Biomedical Imaging (ISBI)},
+  pages={1--5},
+  year={2022},
+  organization={IEEE}
+}
+```
